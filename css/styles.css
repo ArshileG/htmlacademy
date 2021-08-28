@@ -8,6 +8,8 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: var(--main-color);
     background: #E5E5E5;
+    font-size: 16px;
+    line-height: 19.5px;
 }
 h1, h2, h3, h4, .bouqette-title {
     font-family: 'Playfair Display', serif;
@@ -21,7 +23,9 @@ h2, h3{
 nav {
     font-size: 16px;
 }
-
+cite {
+    font-weight: 500;;
+}
 .title-big {
     font-family: 'Playfair Display', serif;
     font-style: italic;
@@ -42,6 +46,7 @@ nav {
     height: 80px;
     width: 285px;
     border-radius: 40px;
+    padding:25px;
 }
 .feature-title {
     font-size:16px;
@@ -57,4 +62,10 @@ nav {
 .bouqette-desc {
     color: #fff;
 
+}
+.footer-menu {
+    color:#fff;
+}
+.contact-detail {
+    font-weight: 500;
 }
