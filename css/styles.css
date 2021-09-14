@@ -1,15 +1,47 @@
+ul, li,a {
+    list-style: none;
+    text-decoration: none;
+}
+h1,h2,h3,h4,h5,p, body, ul,figure {
+    margin: 0;
+    padding:0;
+}
 :root {
     --main-color: #AE7C78;
     --button-color: #D89999;
   }
-  
-
+.index-grid {
+    display: grid;;
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+.container {
+    max-width:1200px;
+    margin: 0 auto;
+    height: 100%;
+}
+header{
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+    grid-area: header;
+}
+main{
+    grid-area: main;
+}
+footer{
+    grid-area:footer;
+}
 body {
     font-family: 'Montserrat', sans-serif;
     color: var(--main-color);
-    background: #E5E5E5;
     font-size: 16px;
     line-height: 19.5px;
+}
+main, header, footer {
+    background: white;
 }
 h1, h2, h3, h4, .bouqette-title {
     font-family: 'Playfair Display', serif;
@@ -20,6 +52,7 @@ h2, h3{
     line-height: 48px;
 }
 
+
 nav {
     font-size: 16px;
 }
@@ -28,33 +61,167 @@ cite {
 }
 .title-big {
     font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: 44px;
+    font-size: 42px;
+    font-weight:400;
     line-height: 59px;
 }
 
+section {
+    margin-bottom: 50px;
+}
+h2.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+header {
+    margin-top:25px;
+    margin-bottom:45px;
+    position: relative;
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+
+}
+ul.navigation{
+    padding: 20px;
+}
+ul.navigation li:nth-child(3){
+    margin-right: 110px;
+}
+.logo {
+    position: absolute;
+    left: calc(50% - 54px);
+    top: 8px;
+}
+
+
+.banner {
+    display: grid;
+    grid-template-columns: repeat(3, 390px);
+    column-gap: 15px;;
+}
+.banner-content {
+
+}
+
+.banner img:first-of-type {
+    margin-top: 59px;
+}
 .banner-title {
+    margin-bottom:30px;
 
 }
 .banner-text {
+    margin: 0;
+    margin-bottom: 30px;
     font-size:24px;
     line-height: 29px;;
 }
 .btn {
+    display: inline-block;
     background: var(--button-color);
     color: white;
-    height: 80px;
-    width: 285px;
     border-radius: 40px;
-    padding:25px;
+    padding: 25px 40px;
+}
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.features-list{
+    display:flex;
+}
+.features-content {
+    margin-left:25px;
 }
 .feature-title {
     font-size:16px;
     font-weight: 500;
+    margin-bottom: 15px;
 }
 .feature-desc {
     font-size:16px;
     line-height: 19.5px;
+}
+.popular-products {
+    max-width: 800px;
+    margin: 40px auto;
+}
+.popular-products-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.popular-product-content h3 {
+    font-size: 24px;
+    font-weight: normal;
+    margin: 30px 0px 20px;
+}
+.popular-product-content p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.popular-product-content .product-size{
+    display: block;
+    font-size: 14px;
+    margin-bottom: 20px;;
+}
+.popular-product-content .product-price{
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;;
+}
+.popular-product-content .btn {
+    margin-top: 60px;
+    box-sizing: border-box;
+    min-width: 250px;
+    text-align: center;
+}
+.slider-btn {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.slider-btn .left-arrow {
+    background: url(/img/left-arrow.png);
+    width: 51px;
+    height: 16px;
+}
+.slider-btn .right-arrow {
+    background: url(/img/right-arrow.png);
+    width: 51px;
+    height: 16px;
+}
+.bouqette-categories ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+.bouqette-categories ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;;
+    text-align: center;
+    border-radius: 15px;
+}
+li.wedding-bouqette{
+    background: linear-gradient(rgba(174, 124, 120, 0.6), rgba(174, 124, 120, 0.6)),url(/img/tulips-for-marriage.jpg);
+    height: 442px;
+}
+li.tulips-with-flower{
+    background: linear-gradient(rgba(174, 124, 120, 0.6), rgba(174, 124, 120, 0.6)),url(/img/tulips-with-flower.jpg);
+    height: 442px;
+
+}
+li.bouqette-assortiment{
+    background: linear-gradient(rgba(174, 124, 120, 0.6), rgba(174, 124, 120, 0.6)),url(/img/tulips-asortiment.jpg);
+    height: 442px;
+
 }
 .bouqette-title {
     color: #fff;
@@ -63,9 +230,171 @@ cite {
     color: #fff;
 
 }
-.footer-menu {
+
+.sale-offer {
+    display: grid;
+    grid-template-columns: 610px 590px;
+}
+.sale-offer-content{
+    background: var(--main-color);
+    color: white;
+    padding: 50px 100px;
+}
+.sale-offer-content h3 {
+    margin-bottom: 30px;
+}
+.sale-offer-content p {
+    font-size: 24px;
+    line-height: 24px;
+}
+.steps h3 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+ul.step-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+.step-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.step-list img {
+    margin: ;
+}
+
+.follow-us {
+    display: grid;
+    grid-template-columns: 498px 285px 387px;
+    gap: 15px;
+    
+}
+.follow-us-content  {
+    padding-right: 50px;
+}
+.follow-us-content h2 {
+    margin: 40px 0px;
+}
+.follow-us-content p{
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 40px;
+}
+.follow-us figure:last-of-type {
+    grid-column: 3/4;
+    grid-row:  1/3;;
+}
+.follow-us .smaller-images {
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+}
+.follow-us-socials {
+    display: flex;
+    gap: 25px;
+}
+.icon {
+    display: inline-block;
+}
+.instagram-icon {
+    background: url(/img/instagram_icon.svg)no-repeat;
+    height: 20px;
+    width:20px;
+}
+.facebook-icon {
+    background: url(/img/facebook_icon.svg)no-repeat;
+    height: 20px;
+    width:11.5px;
+}
+.twitter-icon {
+    background: url(/img/twitter_icon.svg)no-repeat;
+    height: 20px;
+    width:25px;
+}
+.instagram-icon-white {
+    background: url(/img/instagram_icon_white.svg)no-repeat;
+    height: 20px;
+    width:20px;
+}
+.facebook-icon-white {
+    background: url(/img/facebook_icon_white.svg)no-repeat;
+    height: 20px;
+    width:11.5px;
+}
+.twitter-icon-white {
+    background: url(/img/twitter_icon_white.svg)no-repeat;
+    height: 20px;
+    width:25px;
+}
+.feedback {
+    border: 1px solid var(--main-color);
+    padding: 40px;
+}
+.feedback-list {
+    display:flex;
+    justify-content: center;
+    text-align: center;
+}
+.feedback-list blockquote {
+    max-width: 300px;;
+}
+.feedback-list blockquote p {
+    margin-bottom: 25px;
+}
+.contact{
+    padding-top:10px;
+}
+.contact-map {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    max-height: 644px;
+}
+.contact-info {
+    position: relative;
+    box-sizing: border-box;
+    background: white; 
+    max-width: 386px;
+    margin-left: 100px;
+    margin-top: 60px;
+    z-index: 10;
+    padding: 40px 30px;
+}
+.contact-info h3 {
+    margin-bottom:25px;
+}
+.contact-info span{
+    display: block;
+}
+.contact-info span:nth-of-type(2n){
+    margin-bottom:30px;
+    margin-top: 10px;
+}
+.footer {
+    background: var(--main-color);
+    padding: 20px;
+}
+.footer .container{
+    background: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-menu ul{
     color:#fff;
+    display: flex;
+}
+.footer-menu li{
+    padding: 20px;
+}
+.footer-social a {
+    margin-right: 25px;
 }
 .contact-detail {
     font-weight: 500;
 }
+
