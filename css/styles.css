@@ -239,6 +239,8 @@ li.bouqette-assortiment{
     background: var(--main-color);
     color: white;
     padding: 50px 100px;
+    box-sizing: border-box;
+    height: 391px;
 }
 .sale-offer-content h3 {
     margin-bottom: 30px;
