@@ -346,13 +346,11 @@ ul.step-list {
     margin-bottom: 25px;
 }
 .contact{
+    position: relative;
     padding-top:10px;
 }
 .contact-map {
     position: absolute;
-    z-index: 1;
-    left: 0;
-    right: 0;
     max-height: 644px;
 }
 .contact-info {
