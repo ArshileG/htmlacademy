@@ -340,16 +340,19 @@ ul.step-list {
     text-align: center;
 }
 .feedback-list blockquote {
-    max-width: 300px;;
+    max-width: 300px;
 }
 .feedback-list blockquote p {
     margin-bottom: 25px;
 }
 .contact{
-    position: relative;
     padding-top:10px;
 }
 .contact-map {
+    position: relative;
+    max-height: 644px;
+}
+.contact-map img {
     position: absolute;
     max-height: 644px;
 }
